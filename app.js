@@ -268,7 +268,10 @@ app.post("/api/webhook-response", async (req, res) => {
   }
 });
 
-// Export as a Vercel function handler
-module.exports = (req, res) => app(req, res);
-
-// (NO app.listen here)
+// // Export as a Vercel function handler
+// module.exports = (req, res) => app(req, res);
+// Start the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`\nListening on port ${port}\n`);
+});
