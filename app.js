@@ -6,11 +6,11 @@ const axios = require("axios");
 const { createClient } = require("@supabase/supabase-js");
 const path = require("path");
 
-const isLocal = process.env.VERCEL !== "1"; // Vercel injects VERCEL=1
+// const isLocal = process.env.VERCEL !== "1"; // Vercel injects VERCEL=1
 
 if (isLocal) {
   // allow local .env for dev only
-  require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+  // require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 }
 
 const app = express();
